@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPv-kw-RZ6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eaC-OE-Uxg"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Music Player" id="hHg-2a-3Lx">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="play" id="kIM-Ez-xQf">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="jHX-it-FVh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BRw-uC-rNY">
+                                <rect key="frame" x="67" y="93" width="240" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="vph-C3-vJ3"/>
+                                    <constraint firstAttribute="height" constant="198" id="vqH-96-6C3"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zkA-jQ-Map">
+                                <rect key="frame" x="65" y="319" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SY4-eK-aAU"/>
+                                    <constraint firstAttribute="width" constant="240" id="gZj-6p-weQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="ajustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="lfn-pF-g0u"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ajq-Dl-xRw">
+                                <rect key="frame" x="65" y="378" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="biG-0u-DZL"/>
+                                    <constraint firstAttribute="width" constant="240" id="sme-sb-5zP"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="scrub:" destination="BYZ-38-t0r" eventType="valueChanged" id="eof-zj-knV"/>
+                                </connections>
+                            </slider>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RA7-iJ-rw3">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yfe-Gf-7UY"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="pwb-iQ-ijJ">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="coi-19-CBI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DfV-QJ-VmJ"/>
+                                    <barButtonItem title="Stop" id="gkV-Be-Ekh">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="eoj-3k-NQk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RA7-iJ-rw3" secondAttribute="bottom" id="2tX-4S-ULp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mPv-kw-RZ6" secondAttribute="trailing" constant="-20" id="6oz-fm-H7H"/>
+                            <constraint firstItem="BRw-uC-rNY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9YJ-At-jUM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RA7-iJ-rw3" secondAttribute="trailing" constant="-20" id="AOa-ft-XsN"/>
+                            <constraint firstItem="BRw-uC-rNY" firstAttribute="top" secondItem="mPv-kw-RZ6" secondAttribute="bottom" constant="29" id="DSC-9P-xUk"/>
+                            <constraint firstItem="Ajq-Dl-xRw" firstAttribute="top" secondItem="zkA-jQ-Map" secondAttribute="bottom" constant="29" id="H34-KD-jxg"/>
+                            <constraint firstItem="mPv-kw-RZ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="S4B-Ub-Oof"/>
+                            <constraint firstItem="RA7-iJ-rw3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ZjT-Vq-9dS"/>
+                            <constraint firstItem="Ajq-Dl-xRw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nFt-Tf-fhV"/>
+                            <constraint firstItem="zkA-jQ-Map" firstAttribute="top" secondItem="BRw-uC-rNY" secondAttribute="bottom" constant="28" id="wS0-tB-9Vd"/>
+                            <constraint firstItem="zkA-jQ-Map" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xCn-iA-Bqx"/>
+                            <constraint firstItem="mPv-kw-RZ6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="y71-7S-wcz"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrubSlider" destination="Ajq-Dl-xRw" id="l1Y-D4-wdk"/>
+                        <outlet property="volumeSlider" destination="zkA-jQ-Map" id="kzT-lF-sQY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488.5" y="413.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="question.jpg" width="200" height="176"/>
+    </resources>
+</document>
